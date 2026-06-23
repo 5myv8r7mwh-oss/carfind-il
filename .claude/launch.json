@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "carfind-server",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/yehonatan/Downloads/carfind-il/server",
+      "port": 3001
+    },
+    {
+      "name": "carfind-client",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/yehonatan/Downloads/carfind-il/client",
+      "port": 5173
+    }
+  ]
+}

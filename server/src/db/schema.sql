@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS prices_cache (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  car_key TEXT NOT NULL UNIQUE,
+  price_min INTEGER,
+  price_max INTEGER,
+  price_median INTEGER,
+  listing_count INTEGER,
+  scraped_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS search_cache (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  params_hash TEXT UNIQUE NOT NULL,
+  result_json TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS searches (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  budget INTEGER,
+  car_type TEXT,
+  uses TEXT,
+  gear TEXT,
+  year_min TEXT,
+  priorities TEXT,
+  free_text TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

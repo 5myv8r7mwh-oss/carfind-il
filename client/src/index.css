@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg:        #f4f6f4;
+  --bg2:       #edf0ed;
+  --white:     #ffffff;
+  --border:    #dde3dd;
+  --border2:   #c8d0c8;
+  --accent:    #4a7c59;
+  --accent2:   #3d6b4a;
+  --accentbg:  rgba(74,124,89,0.08);
+  --accentbg2: rgba(74,124,89,0.15);
+  --text:      #1e2820;
+  --muted:     #6b7d6e;
+  --muted2:    #8a9e8d;
+  --green:     #2d7a4f;
+  --yellow:    #b07d2a;
+  --red:       #b84040;
+  --r:         14px;
+  --r-sm:      9px;
+  --shadow:    0 2px 12px rgba(0,0,0,0.06);
+  --shadow2:   0 4px 24px rgba(0,0,0,0.09);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Assistant', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+}
