@@ -71,8 +71,9 @@ router.post('/', async (req, res) => {
         const model = car.model || '';
         const yearMin = parseInt(car.yearMin) || 2015;
 
+        const isProd = process.env.NODE_ENV === 'production';
         const [priceData, nhtsaIssues] = await Promise.all([
-          make && model ? scrapeYad2(make, model, yearMin) : Promise.resolve(null),
+          (!isProd && make && model) ? scrapeYad2(make, model, yearMin) : Promise.resolve(null),
           make && model ? getComplaints(make, model, yearMin) : Promise.resolve([]),
         ]);
 
