@@ -1,5 +1,6 @@
 export async function searchCars(params) {
-  const res = await fetch('/api/search', {
+  const base = import.meta.env.VITE_API_URL || '';
+  const res = await fetch(`${base}/api/search`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(params),
